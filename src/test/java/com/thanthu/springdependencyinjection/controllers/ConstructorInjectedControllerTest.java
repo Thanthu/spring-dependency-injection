@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.thanthu.springdependencyinjection.services.GreetingServiceImpl;
+import com.thanthu.springdependencyinjection.services.ContructorGreetingServiceImpl;
 
 class ConstructorInjectedControllerTest {
 	
@@ -13,7 +13,7 @@ class ConstructorInjectedControllerTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		constructorInjectedController = new ConstructorInjectedController(new GreetingServiceImpl());
+		constructorInjectedController = new ConstructorInjectedController(new ContructorGreetingServiceImpl());
 	}
 
 	@Test
