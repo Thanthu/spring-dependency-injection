@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.thanthu.springdependencyinjection.controllers.ConstructorInjectedController;
 import com.thanthu.springdependencyinjection.controllers.MyController;
+import com.thanthu.springdependencyinjection.controllers.ProfileController;
 import com.thanthu.springdependencyinjection.controllers.PropertyInjectedController;
 import com.thanthu.springdependencyinjection.controllers.SetterInjectedController;
 
@@ -30,6 +31,10 @@ public class SpringDependencyInjectionApplication {
 		System.out.println("------controller------");
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) applicationContext.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+		
+		System.out.println("------profile------");
+		ProfileController profileController = (ProfileController) applicationContext.getBean("profileController");
+		System.out.println(profileController.sayHello());
 	}
 
 }
