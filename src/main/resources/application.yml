@@ -1,7 +1,15 @@
 spring:
  profiles:
-  active: ES,dev
+  active: ES,prod
 datasource:
  username: thanthu
  password: somespassword
  url: someurl
+
+---
+spring:
+ profiles: prod
+datasource:
+ username: thanthu-prod
+ password: somespassword-prod
+ url: someurl-prod
