@@ -1,0 +1,4 @@
+datasource:
+ username: thanthu-dev
+ password: somespassword-dev
+ url: someurl-dev

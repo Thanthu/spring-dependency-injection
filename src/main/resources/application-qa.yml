@@ -1,0 +1,4 @@
+datasource:
+ username: thanthu-qa
+ password: somespassword-qa
+ url: someurl-qa
