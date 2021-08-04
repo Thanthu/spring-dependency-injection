@@ -9,6 +9,7 @@ import com.thanthu.springdependencyinjection.controllers.MyController;
 import com.thanthu.springdependencyinjection.controllers.ProfileController;
 import com.thanthu.springdependencyinjection.controllers.PropertyInjectedController;
 import com.thanthu.springdependencyinjection.controllers.SetterInjectedController;
+import com.thanthu.springdependencyinjection.datasource.FakeDataSource;
 
 @SpringBootApplication
 public class SpringDependencyInjectionApplication {
@@ -35,6 +36,9 @@ public class SpringDependencyInjectionApplication {
 		System.out.println("------profile------");
 		ProfileController profileController = (ProfileController) applicationContext.getBean("profileController");
 		System.out.println(profileController.sayHello());
+		
+		FakeDataSource fakeDataSource = applicationContext.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource);
 	}
 
 }
