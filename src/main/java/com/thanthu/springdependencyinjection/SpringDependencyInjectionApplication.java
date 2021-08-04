@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.thanthu.springdependencyinjection.config.ConstructorConfig;
 import com.thanthu.springdependencyinjection.config.PropertyConfig;
 import com.thanthu.springdependencyinjection.controllers.ConstructorInjectedController;
 import com.thanthu.springdependencyinjection.controllers.MyController;
@@ -41,9 +42,13 @@ public class SpringDependencyInjectionApplication {
 		FakeDataSource fakeDataSource = applicationContext.getBean(FakeDataSource.class);
 		System.out.println(fakeDataSource);
 		
-		System.out.println("--------Bean property--------");
+		System.out.println("--------Bean property binding--------");
 		PropertyConfig propertyConfig = applicationContext.getBean(PropertyConfig.class);
 		System.out.println(propertyConfig);
+		
+		System.out.println("--------Bean constructor binding--------");
+		ConstructorConfig constructorConfig = applicationContext.getBean(ConstructorConfig.class);
+		System.out.println(constructorConfig);
 		
 		
 	}
